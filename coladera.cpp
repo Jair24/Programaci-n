@@ -20,22 +20,23 @@ void tabladeprimos(int primo[],int n)
 {
 	for(int i=0;i<n;i++)
 	{
-  	primo[i]=true;
+  	    primo[i]=true;
 	}
 }
 void Multiplos(int primo[],int n)
 {
 	for(int i=2;i<n;i++){
-	for(int j=2;i*j<n;j++){
+	   if(primo[i]==1)
+	      for(int j=2;i*j<n;j++){
 		primo[i*j]=false;
-		}
+	      }
 	}
 }
 void show(int primo[],int n)
 {
 	for(int i=2;i<n;i++)
 	{
-	if(primo[i])
-	cout<<i<<" ";
+   	   if(primo[i])
+	       cout<<i<<" ";
 	}
 }  
